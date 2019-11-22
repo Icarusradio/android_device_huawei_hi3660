@@ -21,8 +21,8 @@ PRODUCT_CHARACTERISTICS := tablet
 $(call soong_config_set,android_hardware_audio,run_64bit,true)
 
 PRODUCT_PACKAGES += \
-    android.hardware.audio@5.0-impl-hisi \
-    android.hardware.audio.effect@5.0-impl \
+    android.hardware.audio@6.0-impl-hisi \
+    android.hardware.audio.effect@6.0-impl \
     android.hardware.audio.service \
     android.hardware.bluetooth.audio-impl
 
