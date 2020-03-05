@@ -1,2 +1,5 @@
 # Filesystem
 fs_mgr.overlayfs.prefer_cache_backing_storage=true
+
+# Netflix
+ro.netflix.bsp_rev=Q670-14477-1
