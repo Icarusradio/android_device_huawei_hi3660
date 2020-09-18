@@ -513,10 +513,6 @@ vendor/bin/e00d7df7-79e5-4507-9d8c-df03d5a7a8a5.sec
 vendor/bin/e8014913-e501-4d44-a9d6-058ec3b93b90.sec
 vendor/bin/fd1bbfb2-9a62-4b27-8fdb-a503529076af.sec
 
-# Thermal
-vendor/lib/hw/thermal.hi6250.so
-vendor/lib64/hw/thermal.hi6250.so
-
 # Vowifi
 /vendor/bin/hivwserver
 /vendor/lib/libhivwservice.so
