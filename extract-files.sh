@@ -104,6 +104,11 @@ function blob_fixup() {
             "${PATCHELF}" --set-soname "displayeffect.hi3660.so" "${2}"
             ;;
     esac
+
+    # For all ELF files
+    if [[ "${1}" =~ ^.*(\.so|\/bin\/.*)$ ]]; then
+        "${PATCHELF}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
+    fi
 }
 
 # Initialize the helper

@@ -200,7 +200,7 @@ PRODUCT_PACKAGES += \
 # Misc
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-lite-v29 \
-    libstdc++.vendor \
+    libstdc++_vendor \
     libui-v28 \
     libion
 
