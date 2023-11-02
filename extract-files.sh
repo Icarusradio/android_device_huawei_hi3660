@@ -103,6 +103,9 @@ function blob_fixup() {
         vendor/lib64/displayeffect.hi3660.so)
             "${PATCHELF}" --set-soname "displayeffect.hi3660.so" "${2}"
             ;;
+        vendor/lib64/hwcam/hwcam.services.so)
+        "${PATCHELF}" --replace-needed "libhidlbase.so" "libhidlbase-v32.so" "${2}"
+        ;;
     esac
 
     # For all ELF files
