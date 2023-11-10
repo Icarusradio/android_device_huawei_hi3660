@@ -199,7 +199,7 @@ PRODUCT_PACKAGES += \
 
 # Misc
 PRODUCT_PACKAGES += \
-    libprotobuf-cpp-lite-v29 \
+    libprotobuf-cpp-lite-vendorcompat \
     libstdc++_vendor \
     libion
 
