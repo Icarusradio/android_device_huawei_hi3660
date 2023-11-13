@@ -30,9 +30,6 @@ bluetooth.profile.sap.server.enabled?=true
 vendor.camera.dis.flag=2
 vendor.camera.tnr.flag=1
 
-# Charger
-ro.charger.disable_init_blank=true
-
 # Dex2oat
 dalvik.vm.dex2oat64.enabled=true
 
