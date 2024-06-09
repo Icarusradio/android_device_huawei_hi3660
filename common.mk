@@ -159,7 +159,6 @@ PRODUCT_PACKAGES += \
     ueventd.hi3660.rc
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilts/make_f2fs:$(TARGET_RECOVERY_OUT)/root/system/bin/make_f2fs \
     $(LOCAL_PATH)/rootdir/etc/init.recovery.hi3660.rc:$(TARGET_RECOVERY_OUT)/root/init.recovery.hi3660.rc
 
 # Keymaster
