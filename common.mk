@@ -51,11 +51,13 @@ PRODUCT_COPY_FILES += \
 # Binder
 PRODUCT_PACKAGES += \
     android.hidl.allocator@1.0.vendor \
-    android.hidl.memory@1.0.vendor
-
-PRODUCT_PACKAGES += \
-    libhidltransport \
+    android.hidl.base@1.0.vendor\
+    android.hidl.base@1.0 \
+    android.hidl.memory@1.0.vendor \
+    android.hidl.manager@1.0 \
+    libhidlmemory.vendor \
     libhidltransport.vendor \
+    libhidltransport \
     libhwbinder.vendor \
     libhwbinder
 
@@ -201,7 +203,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-lite-vendorcompat \
     libstdc++_vendor \
-    libion
+    libion.vendor \
+    libion \
+    libnetutils.vendor \
+    libexif.vendor \
+    libexpat.vendor \
+    libjpeg.vendor \
+    libyuv.vendor
 
 PRODUCT_PACKAGES += \
     libiawareperf_client \
