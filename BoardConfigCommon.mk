@@ -156,6 +156,8 @@ VENDOR_SECURITY_PATCH := 2022-07-05
 # Vintf
 DEVICE_MANIFEST_FILE := $(COMMON_PATH)/prebuilts/manifest.xml
 DEVICE_MATRIX_FILE := $(COMMON_PATH)/prebuilts/compatibility_matrix.xml
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
+    vendor/lineage/config/device_framework_matrix.xml
 
 # VNDK
 PRODUCT_FULL_TREBLE_OVERRIDE := true
