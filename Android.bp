@@ -6,3 +6,17 @@
 
 soong_namespace {
 }
+
+install_symlink {
+    name: "vulkan_32_symlink",
+    vendor: true,
+    installed_location: "lib/hw/vulkan.hi3660.so",
+    symlink_target: "/vendor/lib/egl/libGLES_mali.so",
+}
+
+install_symlink {
+    name: "vulkan_64_symlink",
+    vendor: true,
+    installed_location: "lib64/hw/vulkan.hi3660.so",
+    symlink_target: "/vendor/lib64/egl/libGLES_mali.so",
+}

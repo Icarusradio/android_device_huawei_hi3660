@@ -304,6 +304,11 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/pixel \
     $(LOCAL_PATH)/resources
 
+# Symlinks egl/vulkan
+PRODUCT_PACKAGES += \
+    vulkan_32_symlink \
+    vulkan_64_symlink
+
 # Tee
 PRODUCT_PACKAGES += \
     vendor.huawei.hardware.libteec@2.0 \
