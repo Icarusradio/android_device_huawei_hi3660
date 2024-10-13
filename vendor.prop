@@ -3,7 +3,6 @@ persist.kirin.media.hires.enable=true
 persist.kirin.media.lowlatency.enable=false
 persist.kirin.media.offload.enable=true
 persist.kirin.media.usbvoice.enable=true
-ro.hardware.audio.primary=hisi_wrapper
 
 # Bluetooth
 bluetooth.device.default_name=Huawei MediaPad M5
