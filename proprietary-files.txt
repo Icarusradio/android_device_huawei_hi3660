@@ -369,6 +369,7 @@ vendor/lib/libhiion.so
 vendor/lib/libhw_display_effect.so
 vendor/lib/libhw_display_test.so
 vendor/lib/libmediacomm@2.0-client.so
+lineage-20/prebuilts/vndk/v28/arm/arch-arm-armv7-a-neon/shared/vndk-core/libui.so:vendor/lib/libui-v28.so
 vendor/lib/vendor.huawei.hardware.graphics.displayeffect@1.0.so
 vendor/lib/vendor.huawei.hardware.graphics.displayeffect@1.1.so
 vendor/lib/vendor.huawei.hardware.graphics.displayeffect@1.2.so
@@ -398,6 +399,7 @@ vendor/lib64/libhw_display_effect.so
 vendor/lib64/libhw_display_test.so
 vendor/lib64/libmediacomm@2.0-client.so
 vendor/lib64/libRGBW.so
+lineage-20/prebuilts/vndk/v28/arm64/arch-arm64-armv8-a/shared/vndk-core/libui.so:vendor/lib64/libui-v28.so
 vendor/lib64/vendor.huawei.hardware.graphics.displayeffect@1.0.so
 vendor/lib64/vendor.huawei.hardware.graphics.displayeffect@1.1.so
 vendor/lib64/vendor.huawei.hardware.graphics.displayeffect@1.2.so
