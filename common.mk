@@ -201,15 +201,21 @@ PRODUCT_PACKAGES += \
 
 # Misc
 PRODUCT_PACKAGES += \
+    android.hardware.configstore-utils.vendor \
+    libstagefright_softomx_plugin.vendor \
     libprotobuf-cpp-lite-vendorcompat \
+    libutilscallstack.vendor \
+    libhardware_legacy.vendor \
+    libmemtrack.vendor \
+    libaudioroute.vendor \
     libstdc++_vendor \
-    libion.vendor \
-    libion \
     libnetutils.vendor \
     libexif.vendor \
     libexpat.vendor \
     libjpeg.vendor \
-    libyuv.vendor
+    libyuv.vendor \
+    libion.vendor \
+    libion \
 
 PRODUCT_PACKAGES += \
     libiawareperf_client \
