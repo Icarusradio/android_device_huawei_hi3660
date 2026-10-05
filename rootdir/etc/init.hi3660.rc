@@ -330,8 +330,6 @@ on post-fs
     chmod 0660 /proc/uid_iostats/remove_uid_list
     
 on post-fs-data
-    setprop init.svc.console stopped
-   
     mkdir /data/sec_storage_data 0700 system system encryption=None
     restorecon /data/sec_storage_data
     
@@ -1337,7 +1335,6 @@ service vendor.charger /vendor/bin/hw_charger -p
     user root
     group root system
     capabilities SYS_BOOT
-    seclabel u:r:charger:s0
     
 service teecd /vendor/bin/teecd
     class early_hal

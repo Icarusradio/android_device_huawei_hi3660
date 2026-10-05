@@ -1,5 +1,20 @@
 service vendor.hisi_init /vendor/bin/hisi_init
     class main
     user root
-    group system
+    group system wifi bluetooth
     oneshot
+
+# Keep these actions in order: core properties must be applied before the
+# device's sys.rilprops_ready action starts rild. Some phone.prop sections
+# omit some values, so only copy properties that were provided.
+on property:vendor.hisi.phone_props_ready=1 && property:vendor.hisi.default_network=*
+    setprop ro.telephony.default_network ${vendor.hisi.default_network}
+
+on property:vendor.hisi.phone_props_ready=1 && property:vendor.hisi.multisim_config=*
+    setprop persist.radio.multisim.config ${vendor.hisi.multisim_config}
+
+on property:vendor.hisi.phone_props_ready=1 && property:vendor.hisi.cdma_home_operator_numeric=*
+    setprop ro.cdma.home.operator.numeric ${vendor.hisi.cdma_home_operator_numeric}
+
+on property:vendor.hisi.phone_props_ready=1
+    setprop sys.rilprops_ready 1

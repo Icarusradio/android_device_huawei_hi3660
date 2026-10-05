@@ -27,7 +27,7 @@ constexpr const char* kPropHisiChipType = "is_hisi_connectivity_chip";
 
 constexpr const char* kCmdline = "/proc/cmdline";
 constexpr const char* kDefaultId = "0X00000000";
-constexpr const char* kPropRilReady = "sys.rilprops_ready";
+constexpr const char* kPropRilReady = "vendor.hisi.phone_props_ready";
 
 // clang-format off
 constexpr const char* kPhonePropPaths = "/vendor/phone.prop";
