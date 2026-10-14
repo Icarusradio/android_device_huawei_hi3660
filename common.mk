@@ -60,9 +60,14 @@ PRODUCT_PACKAGES += \
     libhwbinder
 
 # Bluetooth
+ifeq ($(TARGET_PRODUCT),lineage_mediapadm5lte)
+PRODUCT_PACKAGES += \
+    android.hardware.bluetooth@1.0-service.huawei
+else
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0-impl \
     android.hardware.bluetooth@1.0-service
+endif
 
 # Bootanimation
 TARGET_BOOTANIMATION_HALF_RES := true
