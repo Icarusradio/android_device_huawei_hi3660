@@ -40,7 +40,7 @@ BUILD_BROKEN_DUP_RULES := true
 TARGET_SCREEN_DENSITY := 420
 
 # Init
-TARGET_INIT_VENDOR_LIB := //$(COMMON_PATH)/resources:init_hisi
+$(call soong_config_set,libinit,vendor_init_lib,//$(COMMON_PATH):init_hisi)
 TARGET_RECOVERY_DEVICE_MODULES := init_hisi
 
 # Kernel

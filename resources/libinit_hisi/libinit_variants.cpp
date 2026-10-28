@@ -8,6 +8,8 @@
 #include <libinit_utils.h>
 #include <libinit_variants.h>
 #include <android-base/logging.h>
+#include <cerrno>
+#include <cstring>
 #include <fstream>
 
 using namespace std;

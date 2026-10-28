@@ -300,7 +300,6 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/google/interfaces \
     hardware/google/pixel \
-    $(LOCAL_PATH)/resources \
     device/huawei/compat
 
 # Speed profile services and wifi-service to reduce RAM and storage
