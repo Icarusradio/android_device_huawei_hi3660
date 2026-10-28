@@ -1,0 +1,27 @@
+// Copyright (C) 2018 The Android Open Source Project
+// SPDX-License-Identifier: Apache-2.0
+
+package {
+    default_applicable_licenses: ["Android-Apache-2.0"],
+}
+
+// Keep the Android P contract used by the stock HALs and the 4.9 kernel.
+// Matrix: hardware/interfaces@227fecd3ed5038d5bf2ac051380eb8eb8427a1ce.
+// Omit the unused optional bluetooth.a2dp and wifi.offload HALs removed in Android 15.
+// Kernel requirements: kernel/configs@9f52312263bf8f14c256df317755478d08a09989.
+vintf_compatibility_matrix {
+    name: "hi3660_framework_compatibility_matrix.3.xml",
+    stem: "compatibility_matrix.3.xml",
+    srcs: ["compatibility_matrix.3.xml"],
+    kernel_configs: ["hi3660_kernel_config_p_4.9"],
+}
+
+kernel_config {
+    name: "hi3660_kernel_config_p_4.9",
+    srcs: [
+        "kernel-4.9/android-base.config",
+        "kernel-4.9/android-base-arm.config",
+        "kernel-4.9/android-base-arm64.config",
+    ],
+    meta: "kernel-4.9/android-base-conditional.xml",
+}

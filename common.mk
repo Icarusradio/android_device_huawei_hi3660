@@ -297,6 +297,10 @@ PRODUCT_PACKAGES += \
 # Shipping API
 PRODUCT_SHIPPING_API_LEVEL := 28
 
+# VINTF: retain the FCM level declared by the stock vendor manifest.
+PRODUCT_PACKAGES += \
+    hi3660_framework_compatibility_matrix.3.xml
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
