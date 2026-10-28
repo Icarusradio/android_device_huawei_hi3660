@@ -39,6 +39,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libalsautils \
     libaudiopreprocessing \
+    libexpat.vendor \
     libtinycompress
 
 PRODUCT_COPY_FILES += \
