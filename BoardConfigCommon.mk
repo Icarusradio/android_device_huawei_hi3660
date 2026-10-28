@@ -7,9 +7,6 @@
 COMMON_PATH := device/huawei/hi3660
 COMPAT_PATH := device/huawei/compat
 
-# APEX
-OVERRIDE_TARGET_FLATTEN_APEX := true
-
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
