@@ -16,6 +16,10 @@ PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 PRODUCT_CHARACTERISTICS := tablet
 
+# ART
+# Keep dexpreopt and runtime GC aligned on the legacy 4.9 kernel.
+PRODUCT_ENABLE_UFFD_GC := false
+
 # Audio
 $(call soong_config_set,android_hardware_audio,run_64bit,true)
 $(call soong_config_set,huaweiAudioVars,emui_version,9)
