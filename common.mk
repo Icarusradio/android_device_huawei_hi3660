@@ -156,8 +156,10 @@ PRODUCT_PACKAGES += \
     init.usb.hi3660.rc \
     ueventd.hi3660.rc
 
+# Keep the Huawei formatter's on-disk layout, adapting Android 15's block-size option.
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilts/make_f2fs:$(TARGET_RECOVERY_OUT)/root/system/bin/make_f2fs \
+    $(LOCAL_PATH)/rootdir/make_f2fs.sh:$(TARGET_RECOVERY_OUT)/root/system/bin/make_f2fs \
+    $(LOCAL_PATH)/prebuilts/make_f2fs:$(TARGET_RECOVERY_OUT)/root/system/bin/make_f2fs.huawei \
     $(LOCAL_PATH)/rootdir/etc/init.recovery.hi3660.rc:$(TARGET_RECOVERY_OUT)/root/init.recovery.hi3660.rc
 
 # Keymaster
