@@ -36,6 +36,9 @@ PRODUCT_PACKAGES += \
     audio.r_submix.default \
     audio.usb.default
 
+# The HIDL 4.0 client is loaded by 64-bit audioserver from the system partition.
+PRODUCT_PACKAGES += libaudiohal_huawei_4_0:64
+
 PRODUCT_PACKAGES += \
     libalsautils \
     libaudiopreprocessing \
