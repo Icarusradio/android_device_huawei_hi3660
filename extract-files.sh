@@ -74,6 +74,7 @@ function blob_fixup() {
             ;;
         vendor/lib*/hw/hwcomposer.hi3660.so)
             "${PATCHELF}" --replace-needed "libui.so" "libui-v28.so" "${2}"
+            python3 "${MY_DIR}/tools/fix_hwc_native_config.py" "${2}"
             ;;
         vendor/lib64/libbt-vendor.so)
             "${PATCHELF}" --set-soname "libbt-vendor.so" "${2}"
