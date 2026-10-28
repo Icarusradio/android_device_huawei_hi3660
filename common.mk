@@ -210,6 +210,12 @@ PRODUCT_PACKAGES += \
     libui-v28 \
     libion
 
+# Vendor libraries required by the Huawei graphics blobs.
+PRODUCT_PACKAGES += \
+    android.hardware.configstore-utils.vendor \
+    libion.vendor \
+    libutilscallstack.vendor
+
 PRODUCT_PACKAGES += \
     libiawareperf_client \
     libperfgenius_vendor_client
