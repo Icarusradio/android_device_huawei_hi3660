@@ -56,6 +56,9 @@ fi
 
 function blob_fixup() {
     case "${1}" in
+        vendor/bin/wpa_supplicant_hisi)
+            python3 "${MY_DIR}/tools/fix_wpa_supplicant_sk_dup.py" "${2}" "${PATCHELF_0_18}"
+            ;;
         vendor/lib64/hwcam/hwcam.services.so)
             # This vendor service needs the legacy HIDL constructor map symbol.
             local needed

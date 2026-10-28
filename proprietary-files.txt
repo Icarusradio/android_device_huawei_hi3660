@@ -186,6 +186,7 @@ syetem/etc/charger/*:vendor/etc/charger/
 vendor/bin/oam_hisi
 vendor/bin/octty
 vendor/bin/start_connectivity_hisi
+vendor/bin/wpa_supplicant_hisi
 vendor/etc/cfg_cmr_hisi.ini
 vendor/etc/cfg_cmr_w09_hisi.ini
 vendor/etc/cfg_sht_hisi.ini
