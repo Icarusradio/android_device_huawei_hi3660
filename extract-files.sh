@@ -56,6 +56,14 @@ fi
 
 function blob_fixup() {
     case "${1}" in
+        vendor/lib64/hwcam/hwcam.services.so)
+            # This vendor service needs the legacy HIDL constructor map symbol.
+            local needed
+            needed="$("${PATCHELF}" --print-needed "${2}")" || return $?
+            if ! printf '%s\n' "${needed}" | grep -Fxq "libhidlbase_shim.so"; then
+                "${PATCHELF}" --add-needed "libhidlbase_shim.so" "${2}"
+            fi
+            ;;
         vendor/lib64/hw/audio.primary_hisi.hi3660.so)
             "${PATCHELF}" --add-needed "libprocessgroup.so" "${2}"
             "${PATCHELF}" --add-needed "libshim_audioparams.so" "${2}"

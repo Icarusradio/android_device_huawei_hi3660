@@ -77,7 +77,8 @@ TARGET_SCREEN_WIDTH := 1600
 # Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
-    libmemtrack.vendor
+    libmemtrack.vendor \
+    libhidlbase_shim
 
 PRODUCT_PACKAGES += \
     vendor.huawei.hardware.biometrics.hwfacerecognize@1.1.vendor \
