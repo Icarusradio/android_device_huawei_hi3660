@@ -198,7 +198,9 @@ PRODUCT_PACKAGES += \
 
 # Misc
 PRODUCT_PACKAGES += \
-    libstdc++.vendor \
+    libstdc++_vendor \
+    libstdc++_vendor_symlink32 \
+    libstdc++_vendor_symlink64 \
     libui-v28 \
     libion
 
