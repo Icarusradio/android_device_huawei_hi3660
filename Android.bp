@@ -6,3 +6,12 @@
 
 soong_namespace {
 }
+
+// Huawei consumes binary data under this .xml filename. Install it directly
+// so the vendor image file list matches the files present in the staging tree.
+prebuilt_etc {
+    name: "hi3660_native_packages",
+    src: "prebuilts/native_packages.bin",
+    filename: "native_packages.xml",
+    vendor: true,
+}
