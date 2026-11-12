@@ -59,6 +59,9 @@ function blob_fixup() {
         vendor/bin/wpa_supplicant_hisi)
             python3 "${MY_DIR}/tools/fix_wpa_supplicant_sk_dup.py" "${2}" "${PATCHELF_0_18}"
             ;;
+        vendor/bin/CameraDaemon)
+            python3 "${MY_DIR}/tools/fix_camera_metadata_exports.py" "${2}"
+            ;;
         vendor/lib64/hwcam/hwcam.services.so)
             # This vendor service needs the legacy HIDL constructor map symbol.
             local needed
@@ -108,6 +111,7 @@ function blob_fixup() {
         odm/lib64/hwcam/hwcam.hi3660.m.SHT.so|odm/lib64/hwcam/hwcam.hi3660.m.CMR.so)
             "${PATCHELF}" --remove-needed "vendor.huawei.hardware.ai@1.0.so" "${2}"
             "${PATCHELF}" --remove-needed "vendor.huawei.hardware.biometrics.hwsecurefacerecognize@1.0.so" "${2}"
+            python3 "${MY_DIR}/tools/fix_camera_metadata_exports.py" "${2}"
             ;;
         vendor/lib64/hw/vendor.huawei.hardware.hwdisplay.displayengine@1.2-impl.so)
             "${PATCHELF}" --replace-needed "displayeffect.kirin970.so" "displayeffect.hi3660.so" "${2}"
