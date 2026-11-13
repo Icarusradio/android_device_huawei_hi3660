@@ -22,6 +22,9 @@ FINAL = {
     "odm/lib64/hwcam/hwcam.hi3660.m.CMR.so": "59c1a6e2b71eb897407ba8fc3e74f98c88cecddb6dd7cd9577d462c01b12def7",
     "odm/lib64/hwcam/hwcam.hi3660.m.SHT.so": "578c8862b6758925af379ada113c855467008bb2644af006d81a97c9d42d367b",
 }
+# Combined state after the separate CameraDaemon Looper DT_NEEDED fixup.
+# Metadata remains unchanged; accepting it keeps extraction idempotent.
+CAMERA_DAEMON_LOOPER_SHA256 = "2d02f7dae4c9e37c1611ab3f987e4789e3a8403c828757eb4c74a9c04cb704aa"
 RENAMES = ((b"camera_metadata_section_bounds", b"huawei_metadata_bounds_0000036"),
            (b"camera_metadata_section_names", b"huawei_metadata_names_0000207"))
 
@@ -144,6 +147,9 @@ def main():
     final_expected = FINAL.get(suffix) if suffix else None
     if expected is None:
         raise ValueError("blob path is not one of the approved extraction paths")
+    if suffix == "vendor/bin/CameraDaemon" and digest == CAMERA_DAEMON_LOOPER_SHA256:
+        print("camera metadata exports already renamed; looper dependency already redirected; sha256=" + digest)
+        return
     if digest == final_expected and final_expected:
         print("camera metadata exports already renamed; sha256=" + digest)
         return

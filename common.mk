@@ -79,6 +79,9 @@ TARGET_SCREEN_HEIGHT := 2560
 TARGET_SCREEN_WIDTH := 1600
 
 # Camera
+# CameraDaemon loads this pthread-backed Looper TLS shim through DT_NEEDED.
+PRODUCT_PACKAGES += libhuawei_looper_compat:64
+
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     libmemtrack.vendor \

@@ -60,7 +60,8 @@ function blob_fixup() {
             python3 "${MY_DIR}/tools/fix_wpa_supplicant_sk_dup.py" "${2}" "${PATCHELF_0_18}"
             ;;
         vendor/bin/CameraDaemon)
-            python3 "${MY_DIR}/tools/fix_camera_metadata_exports.py" "${2}"
+            python3 "${MY_DIR}/tools/fix_camera_metadata_exports.py" "${2}" || return $?
+            python3 "${MY_DIR}/tools/fix_camera_looper_dependency.py" "${2}"
             ;;
         vendor/lib64/hwcam/hwcam.services.so)
             # This vendor service needs the legacy HIDL constructor map symbol.
