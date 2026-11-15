@@ -67,7 +67,7 @@ vendor.debug.config.mmu_en=1
 persist.vendor.smart_pool=1
 
 # Graphics
-ro.hardware.egl=mali
+ro.hardware.egl?=mali
 ro.hwui.render_ahead=20
 
 # Media
