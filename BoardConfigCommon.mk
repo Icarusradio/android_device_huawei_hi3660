@@ -148,6 +148,9 @@ VENDOR_SECURITY_PATCH := 2022-07-05
 
 # Vintf
 DEVICE_MANIFEST_FILE := $(COMMON_PATH)/prebuilts/manifest.xml
+ifneq ($(TARGET_PRODUCT),lineage_mediapadm5lte)
+DEVICE_MANIFEST_FILE += $(COMMON_PATH)/prebuilts/manifest_audio_4_0.xml
+endif
 DEVICE_MATRIX_FILE := $(COMMON_PATH)/prebuilts/compatibility_matrix.xml
 
 # Vulkan

@@ -24,20 +24,28 @@ PRODUCT_ENABLE_UFFD_GC := false
 $(call soong_config_set,android_hardware_audio,run_64bit,true)
 $(call soong_config_set,huaweiAudioVars,emui_version,9)
 
+ifeq ($(TARGET_PRODUCT),lineage_mediapadm5lte)
+PRODUCT_PACKAGES += \
+    android.hardware.audio@6.0-impl \
+    android.hardware.audio.effect@6.0-impl \
+    android.hardware.audio.service
+else
 PRODUCT_PACKAGES += \
     android.hardware.audio@4.0-impl \
     android.hardware.audio.effect@4.0-impl \
-    android.hardware.audio.service \
-    android.hardware.bluetooth.audio-impl
+    android.hardware.audio.service
+
+# The HIDL 4.0 client is loaded by 64-bit audioserver from the system partition.
+PRODUCT_PACKAGES += libaudiohal_huawei_4_0:64
+endif
+
+PRODUCT_PACKAGES += android.hardware.bluetooth.audio-impl
 
 PRODUCT_PACKAGES += \
     audio.bluetooth.default \
     audio.primary.hisi_wrapper \
     audio.r_submix.default \
     audio.usb.default
-
-# The HIDL 4.0 client is loaded by 64-bit audioserver from the system partition.
-PRODUCT_PACKAGES += libaudiohal_huawei_4_0:64
 
 PRODUCT_PACKAGES += \
     libalsautils \
