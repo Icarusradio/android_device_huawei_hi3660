@@ -370,7 +370,8 @@ PRODUCT_PACKAGES += \
     libssl.vendor \
     libnl.vendor \
     android.hardware.wifi@1.3.vendor \
-    android.hardware.wifi.hostapd@1.1.vendor \
+    libhwbinder_shim \
+    android.hardware.wifi.hostapd@1.0.vendor \
     android.hardware.wifi.supplicant@1.2.vendor
 
 PRODUCT_PACKAGES += \

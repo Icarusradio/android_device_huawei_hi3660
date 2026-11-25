@@ -117,7 +117,6 @@ service wpa_supplicant /vendor/bin/wpa_supplicant_hisi -dd \
 
 service hostapd /vendor/bin/hostapd_hisi
     interface android.hardware.wifi.hostapd@1.0::IHostapd default
-    interface android.hardware.wifi.hostapd@1.1::IHostapd default
     class main
     capabilities NET_ADMIN NET_RAW
     user wifi
