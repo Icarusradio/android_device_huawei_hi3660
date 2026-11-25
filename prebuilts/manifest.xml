@@ -53,7 +53,7 @@
     <hal format="hidl">
         <name>android.hardware.gnss</name>
         <transport>hwbinder</transport>
-        <version>1.1</version>
+        <version>1.0</version>
         <interface>
             <name>IGnss</name>
             <instance>default</instance>
@@ -201,7 +201,7 @@
     <hal format="hidl">
         <name>vendor.huawei.hardware.gnss</name>
         <transport>hwbinder</transport>
-        <version>1.0</version>
+        <version>1.2</version>
         <interface>
             <name>IHWGnss</name>
             <instance>default</instance>
