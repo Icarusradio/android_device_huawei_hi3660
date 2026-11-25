@@ -109,7 +109,6 @@ service wpa_supplicant /vendor/bin/wpa_supplicant_hisi -dd \
  #  group wifi inet keystore
     interface android.hardware.wifi.supplicant@1.0::ISupplicant default
     interface android.hardware.wifi.supplicant@1.1::ISupplicant default
-    interface android.hardware.wifi.supplicant@1.2::ISupplicant default
     class late_start
     socket wpa_wlan0 dgram 660 wifi wifi
     disabled
